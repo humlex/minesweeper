@@ -15,6 +15,7 @@
 
     .face {
       @include borders;
+      @include buttons;
       width: 57px;
       height: 52px;
       font-size: 30px;

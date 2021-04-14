@@ -7,9 +7,19 @@ import "./index.scss";
 const App: FC<{}> = () => {
   const [cells, setCells] = useState(generateCells());
 
+  console.log("cells", cells);
+
   const renderCells = (): ReactNode => {
     return cells.map((row, rowIndex) =>
-      row.map((cell, colIndex) => <Button key={`${rowIndex} - ${colIndex}`} />)
+      row.map((cell, colIndex) => (
+        <Button
+          key={`${rowIndex} - ${colIndex}`}
+          col={colIndex}
+          row={rowIndex}
+          state={cell.state}
+          value={cell.value}
+        />
+      ))
     );
   };
 
@@ -19,7 +29,7 @@ const App: FC<{}> = () => {
         <div className="header">
           <NumberDisplay value={0} />
           <div className="face">
-            <span role="img" aria-label="face">
+            <span role="img" aria-label="Face">
               😉
             </span>
           </div>

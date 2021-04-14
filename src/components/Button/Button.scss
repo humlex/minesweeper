@@ -2,6 +2,40 @@
 
 .Button {
   @include borders;
+  @include buttons;
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  &.Visible {
+    background-color: #bbbbbb;
+    border-width: 1px;
+  }
+  &.Value-1 {
+    color: blue;
+  }
+  &.Value-2 {
+    color: green;
+  }
+  &.Value-3 {
+    color: red;
+  }
+  &.Value-4 {
+    color: purple;
+  }
+  &.Value-5 {
+    color: maroon;
+  }
+  &.Value-6 {
+    color: turquoise;
+  }
+  &.Value-7 {
+    color: black;
+  }
+  &.Value-8 {
+    color: gray;
+  }
 }
